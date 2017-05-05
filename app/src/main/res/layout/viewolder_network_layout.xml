@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ci_image"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/paris" />
+
+    <TextView
+        style="@style/CustomNetwork"
+        android:id="@+id/tv_evelyn"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="27dp"
+        android:layout_toEndOf="@+id/ci_image"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp" />
+
+    <ImageView
+        style="@style/CustomNetwork"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="44dp"
+        android:layout_toEndOf="@+id/ci_image"
+        android:src="@drawable/icon_location" />
+
+    <TextView
+        style="@style/CustomNetwork"
+        android:id="@+id/tv_paris"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
+        android:layout_toEndOf="@+id/ci_image"
+        android:textColor="@color/colorBlack"
+        android:textSize="12sp" />
+
+    <RatingBar
+        style="?android:ratingBarStyleSmall"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="18dp"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:theme="@style/CustomRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        style="@style/CustomNetwork"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/custom_left_button"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="@string/connect"
+        android:textColor="#FFF" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ci_image"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorBackground" />
+</RelativeLayout>
