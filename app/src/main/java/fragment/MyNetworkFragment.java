@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.example.himanshu.ibilive.R;
 
 import java.util.ArrayList;
@@ -15,43 +16,43 @@ import adapter.MyNetworkRecyclerViewAdapter;
 import model.CustomerModel;
 
 /**
- * Created by himanshu on 29/4/17.
+ * my network fragment
  */
 
 public class MyNetworkFragment extends Fragment {
 
-    ArrayList<CustomerModel> customerModellist = new ArrayList<>();
-    CustomerModel customerModel;
+    private ArrayList<CustomerModel> customerModellist = new ArrayList<>();
+    private CustomerModel customerModel;
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup viewGroup, Bundle SavedInstance)
-    {
+    public View onCreateView(final LayoutInflater inflater, final ViewGroup viewGroup, final Bundle savedInstance) {
         View view;
-        view=inflater.inflate(R.layout.fragment_mynetwork,null);
-        customerModel = new CustomerModel("Evelyn","Paris");
+        view = inflater.inflate(R.layout.fragment_mynetwork, null);
+        customerModel = new CustomerModel("Evelyn", "Paris");
         customerModellist.add(customerModel);
 
-        customerModel = new CustomerModel("Keshav","London");
+        customerModel = new CustomerModel("Keshav", "London");
         customerModellist.add(customerModel);
 
-        customerModel = new CustomerModel("Hitesh","Australia");
+        customerModel = new CustomerModel("Hitesh", "Australia");
         customerModellist.add(customerModel);
 
-        customerModel = new CustomerModel("Aman","India");
+        customerModel = new CustomerModel("Aman", "India");
         customerModellist.add(customerModel);
 
-        customerModel = new CustomerModel("Aman","India");
+        customerModel = new CustomerModel("Aman", "India");
         customerModellist.add(customerModel);
 
-        customerModel = new CustomerModel("Aman","India");
+        customerModel = new CustomerModel("Aman", "India");
         customerModellist.add(customerModel);
 
-        customerModel = new CustomerModel("Aman","India");
+        customerModel = new CustomerModel("Aman", "India");
         customerModellist.add(customerModel);
 
-        customerModel = new CustomerModel("Aman","India");
+        customerModel = new CustomerModel("Aman", "India");
         customerModellist.add(customerModel);
 
-        customerModel = new CustomerModel("Aman","India");
+        customerModel = new CustomerModel("Aman", "India");
         customerModellist.add(customerModel);
 
         MyNetworkRecyclerViewAdapter displayadapter = new MyNetworkRecyclerViewAdapter(getContext(), customerModellist);

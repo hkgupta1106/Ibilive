@@ -9,25 +9,26 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.himanshu.ibilive.R;
-import adapter.DiscoverPostRecyclerViewAdapter;
+
 import adapter.RequestRecyclerViewAdapter;
 
+/**
+ * request fragment
+ */
 public class RequestsFragment extends Fragment {
 
-    private static final int MODE = 2;
-    RequestRecyclerViewAdapter displayadapter;
+    private RequestRecyclerViewAdapter displayAdapter;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup viewGroup, Bundle SavedInstance)
-    {
+    public View onCreateView(final LayoutInflater inflater, final ViewGroup viewGroup, final Bundle savedInstance) {
         View view;
-        view=inflater.inflate(R.layout.fragment_requests,null);
+        view = inflater.inflate(R.layout.fragment_requests, null);
 
-        displayadapter = new RequestRecyclerViewAdapter(getContext());
+        displayAdapter = new RequestRecyclerViewAdapter(getContext());
 
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rv_layout);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(displayadapter);
+        recyclerView.setAdapter(displayAdapter);
         recyclerView.setHasFixedSize(true);
         return view;
     }

@@ -1,18 +1,13 @@
 package model;
 
-import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.util.ArrayList;
-
 /**
- * Created by himanshu on 29/4/17.
+ * model class
  */
 
 public class CustomerModel implements Parcelable {
-
-    String name,city;
 
     public static final Creator<CustomerModel> CREATOR = new Creator<CustomerModel>() {
         @Override
@@ -25,25 +20,65 @@ public class CustomerModel implements Parcelable {
             return new CustomerModel[size];
         }
     };
-
-    public CustomerModel(String name, String city) {
+    private String name, city;
+    /**
+     * @param name name
+     * @param city city
+     */
+    public CustomerModel(final String name, final String city) {
         this.name = name;
         this.city = city;
     }
 
+    /**
+     * @param in in
+     */
+    protected CustomerModel(final Parcel in) {
+        name = in.readString();
+        city = in.readString();
+    }
+
+    /**
+     * @return creater
+     */
+    public static Creator<CustomerModel> getCREATOR() {
+        return CREATOR;
+    }
+    /**
+     * @param dest  dest
+     * @param flags flags
+     */
+    @Override
+    public void writeToParcel(final Parcel dest, final int flags) {
+        dest.writeString(name);
+        dest.writeString(city);
+    }
+
+    /**
+     * @return getting name
+     */
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    /**
+     * @param name setting name
+     */
+    public void setName(final String name) {
         this.name = name;
     }
 
+    /**
+     * @return getting name
+     */
     public String getCity() {
         return city;
     }
 
-    public void setCity(String city) {
+    /**
+     * @param city setting name
+     */
+    public void setCity(final String city) {
         this.city = city;
     }
 
@@ -51,20 +86,5 @@ public class CustomerModel implements Parcelable {
     @Override
     public int describeContents() {
         return 0;
-    }
-
-    protected CustomerModel(final Parcel in) {
-        name = in.readString();
-        city = in.readString();
-    }
-
-    public static Creator<CustomerModel> getCREATOR() {
-        return CREATOR;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(name);
-        dest.writeString(city);
     }
 }

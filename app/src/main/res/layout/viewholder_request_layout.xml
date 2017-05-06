@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="14dp">
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp">
 
     <TextView
         android:id="@+id/tv_blank"
         android:layout_width="match_parent"
         android:layout_height="33dp"
-        android:background="#f3f3f3" />
+        android:background="#f3f3f3"/>
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/rllayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_blank"
-        android:background="@drawable/custom_background">
+                    android:id="@+id/rllayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_blank"
+                    android:background="@drawable/custom_background">
 
         <TextView
             android:id="@+id/tv_blank1"
             android:layout_width="match_parent"
             android:layout_height="33dp"
-            android:backgroundTint="@color/colorWhite" />
+            android:backgroundTint="@color/colorWhite"/>
 
         <TextView
             android:id="@+id/tv_name"
@@ -33,7 +33,7 @@
             android:layout_marginStart="102dp"
             android:layout_marginTop="10dp"
             android:text="@string/name_john"
-            android:textColor="@color/colorBlack" />
+            android:textColor="@color/colorBlack"/>
 
         <RatingBar
             style="?android:ratingBarStyleSmall"
@@ -45,7 +45,7 @@
             android:layout_toEndOf="@+id/tv_name"
             android:isIndicator="false"
             android:numStars="5"
-            android:theme="@style/CustomRatingBar" />
+            android:theme="@style/CustomRatingBar"/>
 
         <TextView
             android:id="@+id/tv_address"
@@ -57,7 +57,7 @@
             android:drawableStart="@drawable/location_icon_small"
             android:text="1097, St. Peter Street, CA"
             android:textColor="@color/colorBlack"
-            android:textSize="16sp" />
+            android:textSize="16sp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -69,7 +69,7 @@
             android:gravity="center"
             android:paddingStart="6dp"
             android:text="Show On Map"
-            android:textColor="@color/colorWhite" />
+            android:textColor="@color/colorWhite"/>
 
         <TextView
             android:id="@+id/tv_time"
@@ -81,7 +81,7 @@
             android:drawablePadding="1dp"
             android:drawableStart="@drawable/time_1"
             android:text="@string/time"
-            android:textColor="@color/colorBlack" />
+            android:textColor="@color/colorBlack"/>
 
         <TextView
             android:id="@+id/tv_text"
@@ -95,13 +95,13 @@
             android:drawableStart="@drawable/reviewa_icon_small"
             android:text="Lorem ipsum is just the dummy text used in print typeseting"
             android:textColor="@color/colorBlack"
-            android:textSize="16sp" />
+            android:textSize="16sp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="33dp"
             android:layout_below="@id/tv_text"
-            android:backgroundTint="@color/colorWhite" />
+            android:backgroundTint="@color/colorWhite"/>
     </RelativeLayout>
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -109,7 +109,7 @@
         android:layout_width="66dp"
         android:layout_height="66dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/paris" />
+        android:src="@drawable/paris"/>
 
     <TextView
         android:id="@+id/tv_accept"
@@ -126,7 +126,7 @@
         android:paddingTop="15dp"
         android:text="Accept"
         android:textColor="@color/colorWhite"
-        android:textSize="18sp" />
+        android:textSize="18sp"/>
 
 
     <TextView
@@ -145,5 +145,5 @@
         android:paddingTop="15dp"
         android:text="Reject"
         android:textColor="@color/colorWhite"
-        android:textSize="18sp" />
+        android:textSize="18sp"/>
 </RelativeLayout>

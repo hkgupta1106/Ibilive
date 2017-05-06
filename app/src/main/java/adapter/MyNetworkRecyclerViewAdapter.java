@@ -14,10 +14,10 @@ import java.util.ArrayList;
 import model.CustomerModel;
 
 /**
- * Created by himanshu on 29/4/17.
+ * my network recycler view adapter
  */
 
-public class MyNetworkRecyclerViewAdapter  extends android.support.v7.widget.RecyclerView.Adapter<MyNetworkRecyclerViewAdapter.ViewHolder> {
+public class MyNetworkRecyclerViewAdapter extends android.support.v7.widget.RecyclerView.Adapter<MyNetworkRecyclerViewAdapter.ViewHolder> {
 
     private Context context;
     private ArrayList<CustomerModel> customerModellist = new ArrayList<>();

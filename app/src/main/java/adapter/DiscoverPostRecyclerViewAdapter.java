@@ -10,12 +10,15 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
+
 import com.example.himanshu.ibilive.R;
+
 import java.util.ArrayList;
+
 import model.CityModel;
 
 /**
- * Created by himanshu on 29/4/17.
+ * discover post recycler view adapter
  */
 
 public class DiscoverPostRecyclerViewAdapter extends android.support.v7.widget.RecyclerView.Adapter<DiscoverPostRecyclerViewAdapter.ViewHolder> {
@@ -27,8 +30,9 @@ public class DiscoverPostRecyclerViewAdapter extends android.support.v7.widget.R
     private ViewHolder viewHolder;
 
     /**
-     * @param context           context
+     * @param context       context
      * @param cityModellist city arraylist
+     *  @param mode mode
      */
     public DiscoverPostRecyclerViewAdapter(final Context context, final ArrayList<CityModel> cityModellist, final int mode) {
         this.context = context;
@@ -36,7 +40,12 @@ public class DiscoverPostRecyclerViewAdapter extends android.support.v7.widget.R
         this.mode = mode;
     }
 
-    public DiscoverPostRecyclerViewAdapter(Context context, int mode) {
+    /**
+     *
+     * @param context context
+     * @param mode mode
+     */
+    public DiscoverPostRecyclerViewAdapter(final Context context, final int mode) {
         this.context = context;
         this.mode = mode;
     }
@@ -55,9 +64,9 @@ public class DiscoverPostRecyclerViewAdapter extends android.support.v7.widget.R
     @Override
     public DiscoverPostRecyclerViewAdapter.ViewHolder onCreateViewHolder(final ViewGroup parent, final int viewType) {
 
-            View convertView = LayoutInflater.from(context).inflate(R.layout.viewholder_discover_and_post_layout, parent, false);
-            viewHolder = new ViewHolder(convertView);
-            /**
+        View convertView = LayoutInflater.from(context).inflate(R.layout.viewholder_discover_and_post_layout, parent, false);
+        viewHolder = new ViewHolder(convertView);
+        /**
          * return view holder
          */
         return viewHolder;
@@ -69,10 +78,10 @@ public class DiscoverPostRecyclerViewAdapter extends android.support.v7.widget.R
      */
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView tvSendRequest, tvParis;
-        Switch mswitch;
-        ImageView ivDelete;
-        RelativeLayout relativeLayout;
+        private TextView tvSendRequest, tvParis;
+        private Switch mswitch;
+        private ImageView ivDelete;
+        private RelativeLayout relativeLayout;
 
         /**
          * @param itemView itemm view
@@ -86,10 +95,10 @@ public class DiscoverPostRecyclerViewAdapter extends android.support.v7.widget.R
             relativeLayout = (RelativeLayout) itemView.findViewById(R.id.rl_layout1);
             ivDelete = (ImageView) itemView.findViewById(R.id.iv_delete);
 
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(RecyclerView.LayoutParams.WRAP_CONTENT, RecyclerView.LayoutParams.WRAP_CONTENT);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(RecyclerView.LayoutParams.WRAP_CONTENT,
+                    RecyclerView.LayoutParams.WRAP_CONTENT);
 
-            if(mode == 0)
-            {
+            if (mode == 0) {
                 ivDelete.setImageResource(R.drawable.location_icon);
                 tvParis.setText("Paris");
                 tvParis.setBackgroundResource(0);
@@ -97,10 +106,8 @@ public class DiscoverPostRecyclerViewAdapter extends android.support.v7.widget.R
                 relativeLayout.setVisibility(View.VISIBLE);
                 tvSendRequest.setVisibility(View.VISIBLE);
                 mswitch.setVisibility(View.GONE);
-            }
-            else if (mode == 1)
-            {
-                params.setMargins(0,0,0,0);
+            } else if (mode == 1) {
+                params.setMargins(0, 0, 0, 0);
                 tvParis.setLayoutParams(params);
                 ivDelete.setLayoutParams(params);
                 tvParis.setBackgroundResource(R.drawable.delete_icon);

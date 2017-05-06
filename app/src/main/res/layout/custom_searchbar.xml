@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/FragmentDiscoverAndMyPost"
-    android:layout_marginEnd="14dp"
-    android:layout_marginStart="12dp"
-    android:layout_marginTop="12dp"
-    android:orientation="horizontal">
+              style="@style/FragmentDiscoverAndMyPost"
+              android:layout_marginEnd="14dp"
+              android:layout_marginStart="12dp"
+              android:layout_marginTop="12dp"
+              android:orientation="horizontal">
 
     <EditText
         android:id="@+id/et_search"
@@ -19,13 +19,13 @@
         android:paddingBottom="7dp"
         android:paddingStart="14dp"
         android:paddingTop="7dp"
-        android:textSize="14sp" />
+        android:textSize="14sp"/>
 
     <ImageView
         android:id="@+id/iv_info_button"
         style="@style/CustomNetwork"
         android:layout_marginStart="8dp"
         android:src="@drawable/info_icon"
-        android:visibility="visible" />
+        android:visibility="visible"/>
 
 </LinearLayout>

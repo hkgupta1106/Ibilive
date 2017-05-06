@@ -11,28 +11,36 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.example.himanshu.ibilive.R;
+
 import java.util.ArrayList;
+
 import adapter.DiscoverPostRecyclerViewAdapter;
 import model.CityModel;
 
+/**
+ * discover and post fragment
+ */
 public class DiscoverAndMyPostFragment extends Fragment {
 
     private int mode;
-    DiscoverPostRecyclerViewAdapter displayadapter;
+    private DiscoverPostRecyclerViewAdapter displayadapter;
     private ImageView ivInfoButton;
     private EditText etSearch;
 
+    private ArrayList<CityModel> cityModellist = new ArrayList<>();
+    private CityModel cityModel;
+
+    /**
+     *
+     * @param mode mode
+     */
     public DiscoverAndMyPostFragment(final int mode) {
         this.mode = mode;
     }
-
-    ArrayList<CityModel> cityModellist = new ArrayList<>();
-    CityModel cityModel;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup viewGroup, Bundle SavedInstance)
-    {
+    public View onCreateView(final LayoutInflater inflater, final ViewGroup viewGroup, final Bundle savedInstance) {
         View view;
-        view=inflater.inflate(R.layout.fragment_discover_and_myposts,null);
+        view = inflater.inflate(R.layout.fragment_discover_and_myposts, null);
         cityModel = new CityModel();
         cityModellist.add(cityModel);
 
@@ -50,16 +58,14 @@ public class DiscoverAndMyPostFragment extends Fragment {
 
         ivInfoButton = (ImageView) view.findViewById(R.id.iv_info_button);
         etSearch = (EditText) view.findViewById(R.id.et_search);
-        if(mode == 0) {
+        if (mode == 0) {
             etSearch.setHint("Where would you like to connect?");
             ivInfoButton.setVisibility(View.VISIBLE);
-            displayadapter = new DiscoverPostRecyclerViewAdapter(getContext(), cityModellist,mode);
-        }
-        else
-        {
+            displayadapter = new DiscoverPostRecyclerViewAdapter(getContext(), cityModellist, mode);
+        } else {
             ivInfoButton.setVisibility(View.GONE);
             etSearch.setHint("Search");
-            displayadapter = new DiscoverPostRecyclerViewAdapter(getContext(), cityModellist,mode);
+            displayadapter = new DiscoverPostRecyclerViewAdapter(getContext(), cityModellist, mode);
         }
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.rvLayout);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

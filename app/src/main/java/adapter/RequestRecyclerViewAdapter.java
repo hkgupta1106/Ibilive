@@ -9,19 +9,24 @@ import android.view.ViewGroup;
 import com.example.himanshu.ibilive.R;
 
 /**
- * Created by himanshu on 4/5/17.
+ * request recycler view adapter
  */
 
-public class RequestRecyclerViewAdapter extends android.support.v7.widget.RecyclerView.Adapter<RequestRecyclerViewAdapter.ViewHolder>  {
+public class RequestRecyclerViewAdapter extends android.support.v7.widget.RecyclerView.Adapter<RequestRecyclerViewAdapter.ViewHolder> {
 
-    Context context;
+    private static final int NUM = 10;
+    private Context context;
 
-    public RequestRecyclerViewAdapter(Context context) {
+    /**
+     *
+     * @param context context
+     */
+    public RequestRecyclerViewAdapter(final Context context) {
         this.context = context;
     }
 
     @Override
-    public RequestRecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RequestRecyclerViewAdapter.ViewHolder onCreateViewHolder(final ViewGroup parent, final int viewType) {
 
         View convertView = LayoutInflater.from(context).inflate(R.layout.viewholder_request_layout, parent, false);
         ViewHolder viewHolder = new RequestRecyclerViewAdapter.ViewHolder(convertView);
@@ -29,10 +34,13 @@ public class RequestRecyclerViewAdapter extends android.support.v7.widget.Recycl
     }
 
     @Override
-    public void onBindViewHolder(RequestRecyclerViewAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(final RequestRecyclerViewAdapter.ViewHolder holder, final int position) {
 
     }
 
+    /**
+     * view holder
+     */
     public class ViewHolder extends RecyclerView.ViewHolder {
         /**
          * @param itemView itemm view
@@ -46,6 +54,6 @@ public class RequestRecyclerViewAdapter extends android.support.v7.widget.Recycl
 
     @Override
     public int getItemCount() {
-        return 10;
+        return NUM;
     }
 }

@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="56dp"
-    android:background="@color/colorPrimaryDark"
-    android:orientation="horizontal"
-    android:layout_alignParentBottom="true">
+              android:layout_width="match_parent"
+              android:layout_height="56dp"
+              android:layout_alignParentBottom="true"
+              android:background="@color/colorPrimaryDark"
+              android:orientation="horizontal">
 
     <TextView
         android:id="@+id/tv_discover"
         style="@style/CustomBottombar"
         android:drawableTop="@drawable/discover_icon"
-        android:text="@string/discover" />
+        android:text="@string/discover"/>
 
     <TextView
         android:id="@+id/tv_map"
         style="@style/CustomBottombar"
         android:drawableTop="@drawable/map"
-        android:text="@string/map" />
+        android:text="@string/map"/>
 
     <TextView
         android:id="@+id/tv_myposts"
         style="@style/CustomBottombar"
         android:drawableTop="@drawable/my_post"
-        android:text="@string/my_post" />
+        android:text="@string/my_post"/>
 
     <TextView
         android:id="@+id/tv_requests"
         style="@style/CustomBottombar"
         android:drawableTop="@drawable/request"
-        android:text="@string/requests" />
+        android:text="@string/requests"/>
 
     <TextView
         android:id="@+id/tv_mynetwork"

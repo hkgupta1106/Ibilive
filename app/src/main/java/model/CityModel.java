@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * Created by himanshu on 30/4/17.
+ * model class
  */
 
 public class CityModel implements Parcelable {
@@ -21,25 +21,44 @@ public class CityModel implements Parcelable {
         }
     };
 
+    /**
+     * default constructor
+     */
     public CityModel() {
 
     }
+
+    /**
+     *
+     * @param in in
+     */
+    protected CityModel(final Parcel in) {
+
+    }
+
+    /**
+     *
+     * @return creater
+     */
+    public static Creator<CityModel> getCREATOR() {
+        return CREATOR;
+    }
+
+    /**
+     *
+     * @param dest dest
+     * @param flags flags
+     */
+    @Override
+    public void writeToParcel(final Parcel dest, final int flags) {
+
+    }
+
+
 
     @Override
     public int describeContents() {
         return 0;
     }
 
-    protected CityModel(final Parcel in) {
-
-    }
-
-    public static Creator<CityModel> getCREATOR() {
-        return CREATOR;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-
-    }
 }

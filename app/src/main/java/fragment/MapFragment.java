@@ -18,8 +18,9 @@ import com.google.android.gms.maps.SupportMapFragment;
  */
 public class MapFragment extends Fragment implements OnMapReadyCallback {
 
-    EditText etSearch;
-    ImageView ivInfoButton;
+    private EditText etSearch;
+    private ImageView ivInfoButton;
+
     @Override
     public void onMapReady(final GoogleMap googleMap1) {
 
@@ -34,7 +35,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         ivInfoButton = (ImageView) view.findViewById(R.id.iv_info_button);
         etSearch.setHint("Location");
         ivInfoButton.setVisibility(View.GONE);
-        etSearch.setCompoundDrawablesWithIntrinsicBounds(R.drawable.location_icon_small,0,0,0);
+        etSearch.setCompoundDrawablesWithIntrinsicBounds(R.drawable.location_icon_small, 0, 0, 0);
         return view;
     }
 
